@@ -12,7 +12,7 @@ class MyApp : Application() {
 
         startKoin {
             androidContext(this@MyApp)
-            listOf(module {
+            modules(module {
                 single { ApiClient.build() }
                 single { Repository(get()) }
                 viewModel { MyViewModel(get()) }
